@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="cs" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Můj blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+</head>
+<body>
+    <div th:each="post: ${prispevek}">
+    <h1 th:utext="${post.title}">Noc kostelů - Praha 2021</h1>
+
+    <div th:utext="${post.body}">Zastávka první</div>
+
+    <a href="/">Zpět</a>
+    </div>
+
+</body>
+</html>

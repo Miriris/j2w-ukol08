@@ -7,6 +7,12 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-    <h1>Tady bude můj blog…</h1>
+    <h1>Noc kostelů - Praha 2021</h1>
+    <div th:each="post: ${prispevky}">
+    <div th:utext="${post.title}">Zastávka první</div>
+    <span th:utext="${post.author}">Jméno autora</span>
+    <div th:utext="${post.perex}">Příspěvek začíná...</div>
+    <a th:href="@{|/post/${post.slug}|}" >Přečíst</a>
+    </div>
 </body>
 </html>
